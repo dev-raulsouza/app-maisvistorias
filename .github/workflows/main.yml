@@ -1,0 +1,15 @@
+on: [push]
+name: Substituição de variáveis
+
+jobs:
+build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: microsoft/variable-substitution@v1 
+    with:
+        files: 'keys.json'
+    env:
+        access_key: ${{ secrets.ACCESS_KEY }}
+        secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
+        url: https://github.com/${{github.repository}}
