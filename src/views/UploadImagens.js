@@ -30,11 +30,11 @@ export default function UploadImagens({ navigation }) {
     };
 
     const options = {
-      keyPrefix: "KEYPREFIX/",
-      bucket: "BUCKETNAME",
-      region: "sa-east-1",
-      accessKey: "ID",
-      secretKey: "SECRET",
+      keyPrefix: "",
+      bucket: "",
+      region: "",
+      accessKey: "",
+      secretKey: "",
       successActionStatus: 201,
     };
 
