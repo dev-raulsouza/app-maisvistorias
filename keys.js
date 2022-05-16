@@ -1,4 +1,6 @@
 export default function keys(){
-    let accessKeyID = 'AKIAQMLLBWA6PI76BWKC';
-    let secretAccessKeyID = 'CmfPb0xi3fXinQWURuo8qH2mSFkqRDuBV5lqcE9X';
+var keysjson = JSON.parse('./keys.json');
+
+    let accessKeyID = keysjson[access_key];
+    let secretAccessKeyID = keysjson[secret_access_key];
 }

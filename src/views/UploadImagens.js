@@ -30,11 +30,11 @@ export default function UploadImagens({ navigation }) {
     };
 
     const options = {
-      keyPrefix: "public/",
-      bucket: "imagensvistorias",
-      region: "sa-east-1",
-      accessKey: "AKIAQMLLBWA6PI76BWKC",
-      secretKey: "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",
+      keyPrefix: "",
+      bucket: "",
+      region: "",
+      accessKey: "",
+      secretKey: "",
       successActionStatus: 201,
     };
 
