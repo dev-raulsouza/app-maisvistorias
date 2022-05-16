@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Button, Image, View, Platform } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { RNS3 } from "react-native-aws3";
+import * as keys from "./../../keys"
 
 export default function UploadImagens({ navigation }) {
   const [image, setImage] = useState(null);
+  
+  var keysReturn = keys();
 
   const pickImage = async () => {
     // No permissions request is necessary for launching the image library
@@ -33,8 +36,8 @@ export default function UploadImagens({ navigation }) {
       keyPrefix: "",
       bucket: "",
       region: "",
-      accessKey: "",
-      secretKey: "",
+      accessKey: keysReturn.accessKey,
+      secretKey: keysReturn.secretKey,
       successActionStatus: 201,
     };
 
