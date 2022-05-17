@@ -16,4 +16,6 @@ jobs:
     env:
         access_key: ${{ secrets.ACCESS_KEY }}
         secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
-        url: https://github.com/${{github.repository}}
+        bucket: ${{ secrets.BUCKET_S3 }}
+        region: ${{ secrets.REGION_BUCKET_S3 }}
+

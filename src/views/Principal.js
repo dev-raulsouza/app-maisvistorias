@@ -24,7 +24,7 @@ export default function Principal({navigation}) {
        >
         
         <TouchableOpacity style={styles.btnSubmit}
-        onPress={() => {navigation.navigate('UploadImagens', {
+        onPress={() => {navigation.navigate('Cliente', {
           id: 30
           })}}>
           <Text style={styles.submitText}>Nova Vistoria</Text>
