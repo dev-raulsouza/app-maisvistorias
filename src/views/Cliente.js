@@ -118,7 +118,7 @@ export default function UploadImagens({ navigation }) {
 
         <TouchableOpacity
           style={styles.btnSubmit}
-          disabled={disabled}
+          disabled={false}
           onPress={() => {
             navigation.navigate("Envio de Imagens", {
               id: 30,
