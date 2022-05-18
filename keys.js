@@ -1,9 +1,6 @@
-import keysjson from './keys.json' assert {type: "json"};
+import keysjson from './keys.json';
 
-export default function keys(){
-
-    let accessKeyID = keysjson["access_key"];
-    let secretAccessKeyID = keysjson["secret_access_key"];
-    
-    return {accessKeyID, secretAccessKeyID};
-}
+export var accessKeyID = keysjson["access_key"];
+export var secretAccessKeyID = keysjson["secret_access_key"];
+export var bucket = keysjson["bucket"];
+export var region = keysjson["region"];
