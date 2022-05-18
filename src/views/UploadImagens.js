@@ -19,7 +19,6 @@ let resultado;
 export default function UploadImagens({ navigation }) {
   const [image, setImage] = useState(null);
 
-
   const pickImage = async () => {
     // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({

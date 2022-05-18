@@ -14,8 +14,8 @@ export default function Login({navigation}) {
     const [senha, onChangePass] = useState("");
 
     const login = (email, senha) => {
-        if (email === 'rsdomeo'){
-            if (senha === '1234'){
+        if (email === ' '){
+            if (senha === ' '){
                 navigation.navigate('Principal', {
                     id: 30
                 })

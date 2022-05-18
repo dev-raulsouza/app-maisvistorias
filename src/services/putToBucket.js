@@ -1,6 +1,17 @@
 import "core-js/features/array/at";
 import { RNS3 } from "react-native-aws3";
 import * as keys from "./../../keys.js";
+import { Alert } from "react-native";
+
+export const alertSucesso = () =>
+  Alert.alert("Envio de Imagem", "A imagem foi enviada com sucesso!", [
+    { text: "OK", onPress: () => {} },
+  ]);
+
+export const alertFalha = () =>
+  Alert.alert("Envio de Imagem", "Não foi possível enviar a imagem.", [
+    { text: "OK", onPress: () => {} },
+  ]);
 
 export function putToBucket(resultado) {
   extensao = resultado.uri.split(".");
@@ -25,12 +36,13 @@ export function putToBucket(resultado) {
     successActionStatus: 201,
   };
 
-  console.log(options);
-  console.log(file);
-
   RNS3.put(file, options).then((response) => {
-    console.log(response);
-    if (response.status !== 201)
+    if (response.status !== 201) {
+      alertFalha();
       throw new Error("Failed to upload image to S3");
+    }
+    if (response.status === 201) {
+      alertSucesso();
+    }
   });
 }
